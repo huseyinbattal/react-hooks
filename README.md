@@ -1,12 +1,7 @@
 # read-me
 
-`import react from "react"`
 
-`import Link from "next/link";
-import { useRouter } from "next/router";
-import User from "./User";
-
-export default function Header() {
+`export default function Header() {
   const router = useRouter();
   return (
     <header className="flex justify-between p-5 text-sm text-gray-700">
@@ -27,4 +22,3 @@ export default function Header() {
     </header>
   );
 }
-`
