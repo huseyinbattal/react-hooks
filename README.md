@@ -1,24 +1,20 @@
-# read-me
+# Using the State Hook
 
+*Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.*
 
-`export default function Header() {
-  const router = useRouter();
+`import React, { useState } from 'react'`
+
+`
+function Example() {
+  // Declare a new state variable, which we'll call "count"
+  const [count, setCount] = useState(0)
   return (
-    <header className="flex justify-between p-5 text-sm text-gray-700">
-      <div className="flex space-x-4 items-center">
-        <Link href="https://about.google/" className="link">
-          About
-        </Link>
-        <Link href="https://store.google.com/" className="link">
-          Store
-        </Link>
-      </div>
-      <div className="flex space-x-4 items-center">
-        <Link href="https://mail.google.com" className="link">Gmail</Link>
-
-        <a onClick={()=>router.push(`/search?term=${router.query.term || "google"}&searchType=image`)} className="link">Images</a>
-        <User />
-      </div>
-    </header>
-  );
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  )
 }
+`
